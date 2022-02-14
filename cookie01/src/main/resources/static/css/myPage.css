@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+#mypageBox {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#mypageBox header{
+	margin: 20px;
+}
+
+#mypageBox img{
+	width: 150px;
+	height: 150px;
+	border: 3px solid #4d4d4d;
+	border-radius: 100px;
+	margin: 10px auto;
+}
+
+#mypageBox p{
+	margin: 10px auto;
+}
+
+#mypageNick {
+	width: 25%;
+	background: rgb(220, 149, 76);
+	color: white;
+	border-radius: 30px;
+	font-size: 20px;
+	padding: 10px;
+}
+
+#mypageBtnBox{
+	width: 100%;
+}
+
+#mypageBtnBox a {
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px;
+	width: 25%;
+}
+
+#mypageBtnBox a:first-child {
+	border: 3px solid #0080ff;
+}
+#mypageBtnBox a:first-child:hover {
+	background: #0080ff;
+	color: white;
+}
+
+#mypageBtnBox a:nth-child(2){
+	border: 3px solid #ff8080;
+}
+#mypageBtnBox a:nth-child(2):hover{
+	background: #ff8080;
+	color: white;
+}
+
+#updateMemForm input[type=submit]{
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px;
+	width: 25%;
+	border: 3px solid #0080ff;
+	background: white;
+}
+#updateMemForm input[type=submit]:hover{
+	background: #0080ff;
+	color: white;
+}
+#updateMemForm input[type=reset]{
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px;
+	width: 25%;
+	border: 3px solid #ff8080;
+	background: white;
+}
+#updateMemForm input[type=reset]:hover{
+	background: #ff8080;
+	color: white;
+}
+
+/** 비빌번호 확인 **/
+#memPwdAlert, #newMemPwdAlert{
+	font-size: 10px;
+	color: red;
+	text-align: right;
+}
+

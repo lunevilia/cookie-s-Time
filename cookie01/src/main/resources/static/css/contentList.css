@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+#contentBox *{
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+#contentBox h1 {
+	margin: 20px;
+}
+
+.contentForBox{
+	border-top: 4px solid rgb(220, 149, 76);
+	border-bottom: 4px solid rgb(220, 149, 76);
+	margin: 20px;
+	padding: 3px;
+
+    background-position: center;
+ 	background-blend-mode: darken;
+}
+
+.contentForBox span, .contentForBox p, .contentForBox h3{
+	margin: 20px;
+}
+
+.contentForBox .DateStyle{
+	width: 80%;
+	border-radius: 10px;
+	font-size: 20px;
+	padding: 20px;
+	background: #b17612;
+}
+
+.cName {
+	padding: 10px;
+	background-color: rgba( 0, 0, 0, 0.3 );
+}
+

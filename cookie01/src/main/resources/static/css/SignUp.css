@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+body {
+	background: rgb(220, 149, 76);
+}
+
+tr{
+	margin: 100px 0;
+	padding: 20px;
+}
+td{
+	padding: 10px;
+}
+
+#backBox {
+	width: 70%;
+	background: white;
+	margin: 100px auto;
+	padding: 100px;
+}
+
+#wrap {
+	width: 500px;
+	margin: 0 auto;
+}
+
+table {
+	margin: 0 auto;
+	font-size: 20px;
+}
+input {
+	padding: 7px;
+	font-size: 15px;
+}
+
+input[type=radio] {
+	height: 15px;
+	width: 15px;
+}
+
+input[type=checkbox] {
+	height: 15px;
+	width: 15px;
+}
+
+#userCheckBox {
+	display: none;
+	margin: 0 auto;
+	width: 400px;
+	height: 140px;
+	border: 4px solid black;
+	border-radius: 20px;
+	transition: 0.5s;
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.multi.cookie01.dao.IBoardDAO">
+
+  	<!--  게시판 전체 조회 -->
+  	<select id="boardListView" parameterType="string"
+  				  resultType="com.multi.cookie01.model.BoardVO">
+  		SELECT b.borNo, m.memId, b.borTitle, b.borScript, b.borUpDate, b.borCreDate, b.borHit, m.memName
+  		FROM board b, member m
+  		WHERE m.memId = b.memId
+  		ORDER BY borNo DESC
+   </select>
+   
+   <!-- 게시판 상세 조회 -->
+   <select id="boardDetailView" parameterType="string" resultType="com.multi.cookie01.model.BoardVO">
+   		SELECT b.borNo, m.memId, b.borTitle, b.borScript, b.borUpDate, b.borCreDate, b.borHit, m.memName
+  		FROM board b, member m
+  		WHERE m.memId = b.memId AND b.borNo = #{borNo}
+   </select>
+   
+   <!-- 게시판 삭제 -->
+   <delete id="detailDelete" parameterType="string">
+   		DELETE FROM board WHERE borNo=#{borNo}
+   </delete>
+   
+   <!-- 게시판 수정 -->
+   <delete id="boardUpdate" parameterType="hashmap">
+   		UPDATE board SET borTitle=#{borTitle}, borScript=#{borScript}, borUpDate = NOW()
+   		WHERE borNo=#{borNo}
+   </delete>
+   
+   <!-- 게시판 글쓰기 -->
+   <insert id="insertBoard" parameterType="hashmap">
+   		INSERT INTO board(memId, borTitle, borScript)
+  		VALUES (#{memId}, #{borTitle}, #{borScript})
+   </insert>
+   
+   <!-- 게시판 조회수 수정 -->
+   <update id="updateBoardhit" parameterType="string">
+	   	UPDATE board SET borHit = borHit+1
+	   	WHERE borNo=#{borNo}
+   </update>
+ 
+</mapper>

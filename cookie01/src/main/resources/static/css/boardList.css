@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/** boardListView TABLE **/
+#borderList {
+	text-align:center;
+	margin: 20px;
+}
+
+#writeButton{
+	text-align: right;
+	margin: 20px 30px;
+	font-weight: bold;
+}
+
+#writeButton a{
+	width: auto;
+	border: 2px solid rgb(190, 114, 37);
+	border-radius: 10px;
+	color : rgb(190, 114, 37);
+	
+	padding: 10px;
+}
+#writeButton a:hover{
+	background : rgb(190, 114, 37);
+	color: white;
+}
+
+#borderList table{
+	border: 0;
+	box-shadow:2px 3px 5px 0px rgb(190, 114, 37);
+}
+
+#borderList table th{
+	background-color : rgb(135, 81, 27);
+	color: white;
+	padding: 10px;
+}
+
+#borderList table tr:not(:first-child):nth-child(2n){
+	background-color: rgb(250, 247, 209);
+}
+
+#borderList table tr:not(:first-child):hover{
+	background-color: rgb(241, 217, 131);
+}
+
+
+
+#boardBox{
+	text-align: center;
+}
+#boardBox h1 {
+	margin: 20px;
+}
+
+#boardBox td {
+	margin: 20px;
+	padding: 5px;
+}
+
+#boardBox a{
+	margin: 20px;
+}
+
+#borDetailBox{
+	width: 700px;
+	height: 500px;
+	padding: 30px;
+	box-shadow:2px 3px 5px 0px rgb(190, 114, 37);
+}
+
+
+
+
+#detailTop, #detailTop2{
+	display: flex;
+    justify-content: space-between;
+	width: 100%;
+	color: #474747;
+}
+#detailTop > span{
+	flex: 1;
+	margin: 5px;
+}
+
+
+
+#detailTop2 > span{
+	flex: 1;
+}
+
+
+#borDetailContent {
+	width: 80%;
+	height: 50%;
+	margin: 20px auto;
+	background: #fcfae0;
+}
+
+#bottomDetailButton{
+	width: 100%;
+}
+
+
+
+/*  ------ bottom Buttom -------------- */
+#detailBottomButton{
+	width: 100%;
+	display: flex;
+	 justify-content: space-between;
+}
+
+#detailLeftButton {
+	flex: 7;
+	text-align: left;
+}
+#detailLeftButton a{
+	padding: 10px;
+}
+.detailRightButton{
+	flex: 1;
+	text-align: right;
+	padding: 10px;
+}
+
+/** Update page Style **/
+
+
+#borTitle {
+	padding: 10px;
+	font-size: 18px;
+}
+
+#borscript{
+	padding: 10px;
+	background: #fcfae0;
+	border: 0;
+	outline: 0;
+}
+
+#updateSubmitButton {
+	background: none;
+	color: black;
+	border: 0;
+	outline: 0;
+}

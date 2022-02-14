@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.multi.cookie01.dao.IMemberDAO">
+	<resultMap id="memResult" type="com.multi.cookie01.model.MemberVO">
+		<result property="memId" column="memId" />
+		<result property="memPwd" column="memPwd" />
+		<result property="memName" column="memName" />
+		<result property="memEmail" column="memEmail" />
+		<result property="cookieId" column="cookieId" />
+		<result property="memJoinDate" column="memJoinDate" />	
+	</resultMap>
+	
+	<!-- 유저 등록  -->
+	<insert id="insertMember" parameterType="com.multi.cookie01.model.MemberVO">
+		INSERT INTO member (memId, memPwd, memName, memEmail, cookieId)
+		VALUES (#{memId}, #{memPwd}, #{memName}, #{memEmail}, #{cookieId})
+	</insert>
+	
+	<!-- 로그인 확인 -->
+	<select id="loginCheck" resultMap="memResult" parameterType="hashmap">
+		SELECT * FROM member WHERE memId=#{memId} AND memPwd= #{memPwd}
+	</select>
+	
+	<!-- ID 중복 확인 -->
+	<select id="memIdCheck" resultType="string" parameterType="string">
+		SELECT memId FROM member WHERE memId =#{memId}
+	</select>
+	
+	<!-- name에서 id 가져오기 -->
+	<select id="memIdCheck2" resultType="string" parameterType="string">
+		SELECT memId FROM member WHERE memName =#{memName}
+	</select>
+		
+	<!-- id에서 VO 가져오기 -->
+	<select id="mypageView" resultMap="memResult" parameterType="string">
+		SELECT * FROM member WHERE memId =#{memId}
+	</select>
+	
+	<!-- 회원탈퇴하기 -->
+	<delete id="deleteMember" parameterType="string">
+		DELETE FROM member WHERE memId =#{memId}
+	</delete>
+	
+	<!-- update 전에 현재 비밀번호 체크하기 -->
+	<select id="memPwdCheck" resultType="string" parameterType="string" >
+		SELECT memPwd FROM member WHERE memId = #{memId}
+	</select>
+	
+	<!-- 새 비밀번호 및 정보들 업데이트 -->
+	<update id="newPwdUpdate" parameterType="hashmap">
+		UPDATE member 
+		set memPwd=#{newMemPwd},
+		memName=#{memName},
+		memEmail=#{memEmail},
+		cookieId=#{cookieId}
+		WHERE memId=#{memId}
+	</update>
+	
+	<!-- 기존 패스워드 상태로 업데이트  -->
+	<update id="nowPwdUpdate" parameterType="hashmap">
+		UPDATE member 
+		SET memName=#{memName},
+		memEmail=#{memEmail},
+		cookieId=#{cookieId}
+		WHERE memId=#{memId}
+	</update>
+</mapper>
