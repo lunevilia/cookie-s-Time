@@ -5,21 +5,24 @@
 <h3 align="center">[[홈페이지]]</h3>
 <p align="center">
 <img alt="cookieRun1" src="https://github.com/lunevilia/cookie-s-Time/blob/main/readImg/cookieimg1.png?raw=true"/>
+ <hr width = "50%"; color = "lightgray";>
 </p>
 
-<hr width = "50%"; color = "lightgray";>
+
 <h3 align="center">[[타이머]]</h3>
 <p align="center">
 <img alt="cookieRun1" src="https://github.com/lunevilia/cookie-s-Time/blob/main/readImg/cookieImg2.png?raw=true"/>
+ <hr width = "50%"; color = "lightgray";>
 </p>
 
-<hr width = "50%"; color = "lightgray";>
+
 <h3 align="center">[[게시판 리스트]]</h3>
 <p align="center">
 <img alt="cookieRun1" src="https://github.com/lunevilia/cookie-s-Time/blob/main/readImg/cookieImg5.png?raw=true"/>
+ <hr width = "50%"; color = "lightgray";>
 </p>
 
-<hr width = "50%"; color = "lightgray";>
+
 <h3 align="center">[[상세 게시판]]</h3>
 <p align="center">
 <img alt="cookieRun1" src="https://github.com/lunevilia/cookie-s-Time/blob/main/readImg/cookieImg3.png?raw=true"/>
